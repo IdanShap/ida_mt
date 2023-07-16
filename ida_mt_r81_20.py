@@ -205,4 +205,4 @@ def main_loop():
 if __name__ == "__main__":
     main_loop()
 else:
-    print("Change the name of the file to main.py")
+    print("This is standalone script")
