@@ -66,12 +66,12 @@ def ldap():
     print("")
     sys("pdp nested_groups status")
     sys("pdp nested_groups show")
-    print("\nChange LDAP query method to (or type 0 to exit): "
+    print "\nChange LDAP query method to (or type 0 to exit): " \
           "\n\t1 - Recursive query until all nesting levels found " \
           "\n\t2 - Per user - with 1 LDAP search queries all the user groups (require Global Catalog DC) " \
           "\n\t3 - Per group - 1 query for each group in access roles, to check if the user is in it" \
           "\n\t4 - Per user - with with 1 LDAP search queries all the user groups (same as mode 2, but no GC)"
-    option_in = input("Choice: ")
+    option_in = raw_input("Choice: ")
     try:
         if int(option_in) == 1:
             sys("pdp nested_groups __set_state 1")
